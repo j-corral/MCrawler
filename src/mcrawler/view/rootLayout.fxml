@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXHamburger?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -23,15 +24,50 @@
    <left>
       <Pane id="menu-panel" fx:id="panel" maxWidth="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #252525;" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton fx:id="linkPages" layoutX="1.0" layoutY="35.0" mnemonicParsing="false" onAction="#linkPagesClick" prefHeight="26.0" prefWidth="199.0" ripplerFill="#2196f3" styleClass="link" stylesheets="@../assets/css/menu.css" text="Pages">
+            <JFXButton fx:id="linkPages" layoutX="1.0" layoutY="20.0" mnemonicParsing="false" onAction="#linkPagesClick" ripplerFill="#2996f3" stylesheets="@../assets/css/menu.css" text="PAGES">
                <font>
                   <Font name="Roboto Regular" size="18.0" />
                </font>
+               <styleClass>
+                  <String fx:value="link" />
+                  <String fx:value="btn-pages" />
+               </styleClass>
             </JFXButton>
-            <JFXButton fx:id="linkNewPage" layoutX="1.0" layoutY="81.0" mnemonicParsing="false" onAction="#linkNewPageClick" prefHeight="26.0" prefWidth="199.0" ripplerFill="#2196f3" styleClass="link" stylesheets="@../assets/css/menu.css" text="NEW PAGE">
+            <JFXButton fx:id="linkNewPage" layoutX="1.0" layoutY="70.0" mnemonicParsing="false" onAction="#linkNewPageClick" stylesheets="@../assets/css/menu.css" text="NEW PAGE">
                <font>
                   <Font name="Roboto Regular" size="18.0" />
                </font>
+               <styleClass>
+                  <String fx:value="link" />
+                  <String fx:value="btn-new-page" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="linkDownloads" layoutX="1.0" layoutY="120.0" mnemonicParsing="false" onAction="#linkDownloadsClick" stylesheets="@../assets/css/menu.css" text="DOWNLOADS">
+               <font>
+                  <Font name="Roboto Regular" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="link" />
+                  <String fx:value="btn-downloads" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="linkSettings" layoutX="1.0" layoutY="170.0" mnemonicParsing="false" onAction="#linkSettingsClick" stylesheets="@../assets/css/menu.css" text="SETTINGS">
+               <font>
+                  <Font name="Roboto Regular" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="link" />
+                  <String fx:value="btn-settings" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton fx:id="linkExit" layoutX="1.0" layoutY="220.0" mnemonicParsing="false" onAction="#linkExitClick" stylesheets="@../assets/css/menu.css" text="EXIT">
+               <font>
+                  <Font name="Roboto Regular" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="link" />
+                  <String fx:value="btn-exit" />
+               </styleClass>
             </JFXButton>
          </children></Pane>
    </left>

@@ -18,6 +18,34 @@
     -fx-font-family: Roboto;
     -fx-font-size: 20px;
     -fx-cursor: hand;
-    -fx-text-alignment: left;
     -fx-background-color: transparent;
+    -fx-alignment: baseline-left;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+    -fx-translate-x: 0px;
+    /*-fx-graphic: url("/mcrawler/assets/img/Download-1.png");*/
+}
+
+.link:hover {
+    -fx-background-color: #2196f3;
+}
+
+.btn-pages {
+    -fx-graphic: url("/mcrawler/assets/img/Layers-1.png");
+}
+
+.btn-new-page {
+    -fx-graphic: url("/mcrawler/assets/img/New-1.png");
+}
+
+.btn-downloads {
+    -fx-graphic: url("/mcrawler/assets/img/Download-1.png");
+}
+
+.btn-settings {
+    -fx-graphic: url("/mcrawler/assets/img/Settings-1.png");
+}
+
+.btn-exit {
+    -fx-graphic: url("/mcrawler/assets/img/Exit-1.png");
 }

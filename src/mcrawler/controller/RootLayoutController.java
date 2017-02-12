@@ -88,11 +88,27 @@ public class RootLayoutController {
         mainApp.showNewPage();
     }
 
+    @FXML
+    public void linkDownloadsClick() {
+        System.out.println("Downloads click");
+        hamburgerClick();
+        mainApp.showDownloads();
+    }
 
     @FXML
-    private void handleExit() {
-        System.exit(0);
+    public void linkSettingsClick() {
+        System.out.println("Settings click");
+        hamburgerClick();
+        mainApp.showSettings();
     }
+
+    @FXML
+    public void linkExitClick() {
+        System.out.println("Exit click");
+        hamburgerClick();
+        mainApp.handleExit();
+    }
+
 
 
 
