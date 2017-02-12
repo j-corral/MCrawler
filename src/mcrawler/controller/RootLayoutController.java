@@ -1,12 +1,24 @@
 package mcrawler.controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import mcrawler.MainApp;
+
+import java.util.Optional;
 
 /**
  * Created by jonathan on 08/02/17.
@@ -20,6 +32,9 @@ public class RootLayoutController {
 
     @FXML
     private Pane panel;
+
+    @FXML
+    private StackPane stackPane;
 
 
     private HamburgerBasicCloseTransition burgerTask2;
@@ -105,8 +120,18 @@ public class RootLayoutController {
     @FXML
     public void linkExitClick() {
         System.out.println("Exit click");
-        hamburgerClick();
-        mainApp.handleExit();
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit MCrawler");
+        alert.setHeaderText("Exit application ?");
+        alert.setContentText("Are you sure to exit application ?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            hamburgerClick();
+            mainApp.handleExit();
+        }
+        
     }
 
 
