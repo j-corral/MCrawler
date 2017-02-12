@@ -1,0 +1,20 @@
+AnchorPane {
+    -fx-background-color: #ffffff;
+}
+
+#btn-add-page {
+    -fx-background-color: #f44336;
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: center;
+    -fx-cursor: hand;
+}
+
+
+.primary-btn {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: Roboto;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 15px;
+}

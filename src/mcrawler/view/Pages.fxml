@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" stylesheets="@../assets/css/page.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcrawler.controller.PagesController">
+   <children>
+      <Label layoutX="14.0" layoutY="7.0" text="PAGES">
+         <font>
+            <Font name="Roboto Bold" size="24.0" />
+         </font></Label>
+      <JFXButton id="btn-add-page" graphicTextGap="0.0" layoutX="340.0" layoutY="437.0" mnemonicParsing="false" text="+">
+         <font>
+            <Font name="Roboto Bold" size="25.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>
