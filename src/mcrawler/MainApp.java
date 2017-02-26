@@ -19,6 +19,9 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
 
+    private String rootPath = "/home/jonathan/Bureau/testcrawler";
+//    private String rootPath = ".";
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         //Parent root = FXMLLoader.load(getClass().getResource("view/rootLayout.fxml"));
@@ -48,6 +51,14 @@ public class MainApp extends Application {
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
+
+            // get style page.css
+            String style = getClass().getResource("assets/css/page.css").toExternalForm();
+
+            // apply stylesheet to the scene graph
+            scene.getStylesheets().addAll(style);
+
+
             primaryStage.setScene(scene);
 
             // Give the controller access to the main app.
@@ -76,6 +87,37 @@ public class MainApp extends Application {
             // Give the controller access to the main app.
             PagesController controller = loader.getController();
             controller.setMainApp(this);
+
+
+            controller.scanPath(rootPath);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void showPage(String name) {
+        try {
+            // Load pages overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MainApp.class.getResource("view/Page.fxml"));
+            AnchorPane pages = (AnchorPane) loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(pages);
+
+            // Give the controller access to the main app.
+            PageController controller = loader.getController();
+            controller.setMainApp(this);
+
+
+
+            controller.showDetails(name);
+
+
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -148,6 +190,15 @@ public class MainApp extends Application {
 
     public BorderPane getRootLayout() {
         return rootLayout;
+    }
+
+
+    public String getRootPath() {
+        return rootPath;
+    }
+
+    public void setRootPath(String rootPath) {
+        this.rootPath = rootPath;
     }
 
     public static void main(String[] args) {

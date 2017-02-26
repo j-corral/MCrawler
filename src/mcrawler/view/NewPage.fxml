@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.NumberValidator?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="400.0" stylesheets="@../assets/css/page.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcrawler.controller.NewPageController">
    <children>
+      <NumberValidator />
       <Label layoutX="14.0" layoutY="7.0" text="NEW PAGE">
          <font>
             <Font name="Roboto Bold" size="24.0" />
          </font></Label>
-      <JFXTextField labelFloat="true" layoutX="14.0" layoutY="74.0" prefHeight="24.0" prefWidth="364.0" promptText="URL">
+      <JFXTextField fx:id="pageName" labelFloat="true" layoutX="14.0" layoutY="74.0" prefHeight="24.0" prefWidth="364.0" promptText="Page Name">
          <font>
             <Font name="Roboto Regular" size="13.0" />
          </font>
       </JFXTextField>
-      <JFXButton id="btn-save-page" graphicTextGap="0.0" layoutX="300.0" layoutY="430.0" mnemonicParsing="false" styleClass="primary-btn" stylesheets="@../assets/css/page.css" text="SAVE">
+      <JFXTextField fx:id="pageUrl" labelFloat="true" layoutX="14.0" layoutY="154.0" prefHeight="24.0" prefWidth="364.0" promptText="URL (http://www.website.com)">
+         <font>
+            <Font name="Roboto Regular" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="pageDepth"  labelFloat="true" layoutX="14.0" layoutY="234.0" prefHeight="24.0" prefWidth="364.0" promptText="DEPTH">
+         <font>
+            <Font name="Roboto Regular" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXCheckBox fx:id="keepMedias" layoutX="4.0" layoutY="314.0" mnemonicParsing="false" checkedColor="#2196f3" text="keep medias (pictures, sounds, movies, ...)" styleClass="primary-checkbox" stylesheets="@../assets/css/page.css" />
+      <JFXButton id="btn-save-page" fx:id="btnSave" graphicTextGap="0.0" layoutX="300.0" layoutY="430.0" mnemonicParsing="false" onAction="#savePage" styleClass="primary-btn" stylesheets="@../assets/css/page.css" text="SAVE">
          <font>
             <Font name="Roboto Bold" size="25.0" />
          </font></JFXButton>

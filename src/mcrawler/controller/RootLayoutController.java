@@ -131,7 +131,7 @@ public class RootLayoutController {
             hamburgerClick();
             mainApp.handleExit();
         }
-        
+
     }
 
 

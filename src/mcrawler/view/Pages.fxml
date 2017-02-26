@@ -2,7 +2,9 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="400.0" stylesheets="@../assets/css/page.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcrawler.controller.PagesController">
@@ -11,7 +13,13 @@
          <font>
             <Font name="Roboto Bold" size="24.0" />
          </font></Label>
-      <JFXButton id="btn-add-page" graphicTextGap="0.0" layoutX="340.0" layoutY="437.0" mnemonicParsing="false" text="+">
+      <ScrollPane fx:id="scrollPane" layoutX="0.0" layoutY="37.0" prefHeight="465.0" prefWidth="400.0" styleClass="edge-to-edge" stylesheets="@../assets/css/page.css">
+         <content>
+            <GridPane fx:id="pagesContainer" prefHeight="500.0" prefWidth="360.0" stylesheets="@../assets/css/page.css">
+      </GridPane>
+         </content>
+      </ScrollPane>
+      <JFXButton id="btn-add-page" fx:id="btnNewPage" graphicTextGap="0.0" layoutX="340.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnNewPageClick" text="+">
          <font>
             <Font name="Roboto Bold" size="25.0" />
          </font></JFXButton>
