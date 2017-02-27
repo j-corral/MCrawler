@@ -15,7 +15,7 @@
          <font>
             <Font name="Roboto Bold" size="24.0" />
          </font></Label>
-      <JFXTextField fx:id="pageName" labelFloat="true" layoutX="14.0" layoutY="74.0" prefHeight="24.0" prefWidth="364.0" promptText="Page Name">
+      <JFXTextField fx:id="pageName" labelFloat="true" layoutX="14.0" layoutY="74.0" prefHeight="24.0" prefWidth="364.0" promptText="Page Name (uniq name)">
          <font>
             <Font name="Roboto Regular" size="13.0" />
          </font>

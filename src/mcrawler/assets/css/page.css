@@ -19,6 +19,11 @@ AnchorPane {
     -fx-padding: 15px;
 }
 
+.error {
+    -fx-text-fill: #f44336;
+
+}
+
 
 .primary-checkbox {
     -fx-color: #2196f3;

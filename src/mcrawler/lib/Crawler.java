@@ -39,7 +39,7 @@ public class Crawler {
 
         String request = "http://api.screenshotlayer.com/api/capture?access_key="+apiKey+"&url="+url+"&viewport="+viewport+"&width="+width;
 
-        String destination = "/home/jonathan/Bureau/testcrawler/toto/" + name + ".png";
+        String destination = "/home/jonathan/Bureau/testcrawler/" + name + "/preview.png";
 
 
         try {
@@ -59,7 +59,7 @@ public class Crawler {
         }
 
 
-        String filename = path + "." + format;
+        String filename = path + "/index." + format;
 
         try{
             PrintWriter writer = new PrintWriter(filename, "UTF-8");
