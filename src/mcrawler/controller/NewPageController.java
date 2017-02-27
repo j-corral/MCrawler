@@ -12,9 +12,7 @@ import mcrawler.lib.Crawler;
 
 import java.io.IOException;
 
-import static mcrawler.lib.Tools.file_exists;
-import static mcrawler.lib.Tools.isNumeric;
-import static mcrawler.lib.Tools.validateUrl;
+import static mcrawler.lib.Tools.*;
 
 
 /**
@@ -103,7 +101,7 @@ public class NewPageController {
             pageName.setFocusColor(Paint.valueOf("green"));
             pageName.setUnFocusColor(Paint.valueOf("green"));
 
-            if(file_exists(filename)) {
+            if(!file_exists_and_empty(filename)) {
                 name = "";
                 pageName.setFocusColor(Paint.valueOf("red"));
                 pageName.setUnFocusColor(Paint.valueOf("red"));

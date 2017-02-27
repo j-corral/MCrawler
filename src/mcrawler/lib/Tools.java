@@ -22,6 +22,31 @@ public class Tools {
     }
 
 
+    public static boolean file_exists_and_empty(String filename) {
+
+        File f = new File(filename);
+
+        if(f.exists()) {
+
+            if(f.isDirectory() && f.list().length > 0){
+                return false;
+            }
+
+        }
+
+        return true;
+    }
+
+
+    public static boolean delete(String filename) {
+        File f1 = new File(filename);
+
+        boolean success = f1.delete();
+
+
+        return success;
+    }
+
     public static boolean validateUrl(String url) {
 
         URL u = null;

@@ -12,12 +12,8 @@
          <font>
             <Font name="Roboto Bold" size="24.0" />
          </font></Label>
-      <JFXTextField labelFloat="true" layoutX="14.0" layoutY="74.0" prefHeight="24.0" prefWidth="364.0" promptText="URL">
-         <font>
-            <Font name="Roboto Regular" size="13.0" />
-         </font>
-      </JFXTextField>
-      <JFXButton id="btn-save-page" graphicTextGap="0.0" layoutX="300.0" layoutY="430.0" mnemonicParsing="false" styleClass="primary-btn" stylesheets="@../assets/css/page.css" text="SAVE">
+
+      <JFXButton id="btn-clear-page" graphicTextGap="0.0" layoutX="300.0" layoutY="430.0" mnemonicParsing="false" styleClass="primary-btn" stylesheets="@../assets/css/page.css" text="CLEAR">
          <font>
             <Font name="Roboto Bold" size="25.0" />
          </font></JFXButton>

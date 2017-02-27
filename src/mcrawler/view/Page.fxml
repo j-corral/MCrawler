@@ -5,9 +5,27 @@
 <?import javafx.scene.text.Font?>
 
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import com.jfoenix.controls.JFXButton?>
 <AnchorPane prefHeight="500.0" prefWidth="400.0" stylesheets="@../assets/css/page.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcrawler.controller.PageController">
    <children>
-      <GridPane fx:id="pageContainer" stylesheets="@../assets/css/page.css" prefHeight="500.0" prefWidth="400.0" layoutX="14.0" layoutY="7.0">
+      <Label fx:id="title" layoutX="14.0" layoutY="7.0" text="PAGE">
+         <font>
+            <Font name="Roboto Bold" size="24.0" />
+         </font></Label>
+      <ScrollPane fx:id="scrollPane" layoutX="0.0" layoutY="37.0" prefHeight="430.0" prefWidth="400.0" styleClass="edge-to-edge" stylesheets="@../assets/css/page.css">
+      <content>
+      <GridPane fx:id="pageContainer" stylesheets="@../assets/css/page.css" prefHeight="430.0" prefWidth="370.0" layoutX="14.0" layoutY="7.0">
       </GridPane>
+      </content>
+      </ScrollPane>
+      <JFXButton fx:id="btnDelete" graphicTextGap="0.0" layoutX="14.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnDeleteClick" text="Delete" styleClass="primary-btn" stylesheets="@../assets/css/page.css">
+         <font>
+            <Font name="Roboto Bold" size="25.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnView" graphicTextGap="0.0" layoutX="320.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnViewClick" text="View" styleClass="primary-btn" stylesheets="@../assets/css/page.css">
+         <font>
+            <Font name="Roboto Bold" size="25.0" />
+         </font></JFXButton>
    </children>
 </AnchorPane>

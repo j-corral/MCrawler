@@ -113,10 +113,7 @@ public class MainApp extends Application {
             controller.setMainApp(this);
 
 
-
             controller.showDetails(name);
-
-
 
 
         } catch (IOException e) {
