@@ -49,3 +49,11 @@
 .btn-exit {
     -fx-graphic: url("/mcrawler/assets/img/Exit-1.png");
 }
+
+.btn-delete {
+    -fx-graphic: url("/mcrawler/assets/img/Delete-0.png");
+}
+
+.btn-delete:hover {
+   -fx-cursor: hand;
+}

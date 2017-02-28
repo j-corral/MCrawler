@@ -22,6 +22,7 @@ import java.io.File;
 import java.util.Optional;
 
 import static mcrawler.lib.Tools.delete;
+import static mcrawler.lib.Tools.deleteDir;
 import static mcrawler.lib.Tools.file_exists;
 
 /**
@@ -35,6 +36,9 @@ public class PageController {
 
     @FXML
     Label title;
+
+    @FXML
+    JFXButton deletePage;
 
     @FXML
     ImageView preview = new ImageView();
@@ -157,6 +161,37 @@ public class PageController {
     }
 
 
+    @FXML
+    public void deletePageClick(){
+        System.out.println("delete page click");
+
+
+        String filename =  mainApp.getRootPath() + "/" + title.getText();
+
+
+        if (file_exists(filename)) {
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Delete this page");
+            alert.setHeaderText("Delete page : " + title.getText());
+            alert.setContentText("Are you sure to delete this page ?");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
+
+                if(deleteDir(new File(filename))) {
+                    mainApp.showPages();
+                }
+
+            }
+
+        }
+
+
+
+
+
+    }
 
     private void browse(String name, String file) {
 
