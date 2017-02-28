@@ -6,11 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ScrollPane?>
 <AnchorPane prefHeight="500.0" prefWidth="400.0" stylesheets="@../assets/css/page.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mcrawler.controller.SettingsController">
    <children>
       <Label layoutX="14.0" layoutY="7.0" text="Settings">
          <font>
             <Font name="Roboto Bold" size="24.0" />
          </font></Label>
+      <ScrollPane fx:id="scrollPane" layoutX="0.0" layoutY="37.0" prefHeight="465.0" prefWidth="400.0" styleClass="edge-to-edge" stylesheets="@../assets/css/page.css">
+         <content>
+            <GridPane fx:id="settingsContainer" prefHeight="500.0" prefWidth="360.0" stylesheets="@../assets/css/page.css">
+            </GridPane>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

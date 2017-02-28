@@ -19,8 +19,8 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
 
-    private String rootPath = "/home/jonathan/Bureau/testcrawler";
-//    private String rootPath = ".";
+//    private String rootPath = "/home/jonathan/Bureau/testcrawler";
+    private String rootPath = "";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -32,6 +32,8 @@ public class MainApp extends Application {
         //primaryStage.show();
 
         initRootLayout();
+
+        initRootPath();
 
 
         showPages();
@@ -196,6 +198,21 @@ public class MainApp extends Application {
 
     public void setRootPath(String rootPath) {
         this.rootPath = rootPath;
+    }
+
+
+    public void initRootPath() {
+        String defaultPath = System.getProperty("user.home") + "/.MCrawlerData/pages";
+
+        rootPath = defaultPath;
+
+        System.out.println("Init path : " + defaultPath);
+
+        File recordsDir = new File(System.getProperty("user.home"), ".MCrawlerData/pages");
+        if (! recordsDir.exists()) {
+            recordsDir.mkdirs();
+        }
+
     }
 
     public static void main(String[] args) {

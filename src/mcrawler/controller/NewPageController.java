@@ -200,6 +200,8 @@ public class NewPageController {
 
             System.out.println("Page saved :)");
 
+            mainApp.showPage(name);
+
 
         } else {
             System.out.println("Error !");
